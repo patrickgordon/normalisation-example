@@ -125,7 +125,7 @@ class ExampleOneNoNormalising extends Component {
 						)
 					})}
 				</CardDeck>
-				<StateTree state={{ ...this.state }} />
+				<StateTree state={this.state} />
 			</div>
 		);
 	}

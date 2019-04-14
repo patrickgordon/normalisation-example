@@ -113,7 +113,7 @@ class ExampleOneNoNormalising extends Component {
 						)
 					})}
 				</CardDeck>
-				<StateTree state={{ posts, comments }} />
+				<StateTree state={this.state} />
 			</div>
 		);
 	}
