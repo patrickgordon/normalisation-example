@@ -100,7 +100,7 @@ class ExampleOneNoNormalising extends Component {
 															{comment.body}
 														</Card.Text>
 														<Button variant="primary" onClick={() => this.handleUpdateComment(comment.id)}>
-															Update comment hash
+															Update comment
 														</Button>
 													</Card.Body>
 												</Card>
