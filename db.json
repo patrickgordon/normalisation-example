@@ -12,7 +12,7 @@
       "id": 1,
       "name": "Patrick G",
       "body": "I made the comment!",
-      "hash": "23b884cd-1fc7-6291-50c6-91c12b30e157",
+      "hash": "df971b61-1299-2c1f-8311-50ba21d61851",
       "avatar": "http://api.adorable.io/avatars/40/demo-normalisation-1.png"
     },
     {
@@ -20,7 +20,7 @@
       "id": 2,
       "name": "Some Person",
       "body": "Nice comment, Patrick",
-      "hash": "b4e8792d-31e2-c94b-9505-dbd3bcd8ebfb",
+      "hash": "74cbc711-9a96-cb9e-aa35-ca2e8eceb4b7",
       "avatar": "http://api.adorable.io/avatars/40/demo-normalisation-2.png"
     }
   ]

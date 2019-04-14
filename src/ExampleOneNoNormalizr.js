@@ -28,7 +28,7 @@ const BASE_URL = "http://localhost:3001";
 const BASE_POSTS_URL = `${BASE_URL}/posts?_embed=comments`;
 const BASE_COMMENTS_URL = `${BASE_URL}/comments`
 
-class App extends Component {
+class ExampleOneNoNormalizr extends Component {
 	state = {
 		comments: {},
 		posts: [],
@@ -49,11 +49,11 @@ class App extends Component {
 		}
 	}
 
-	handleUpdateComment = async () => {
-		console.log("updating comment one!");
+	handleUpdateComment = async (id) => {
+		console.log(`updating comment ${id}!`);
 
 		const randomHash = guidGenerator();
-		const url = `${BASE_COMMENTS_URL}/1`;
+		const url = `${BASE_COMMENTS_URL}/${id}`;
 
 		try {
 			const response = await fetch(url, {
@@ -107,6 +107,9 @@ class App extends Component {
 																<Card.Text>
 																	{comment.body}
 																</Card.Text>
+																<Button variant="primary" onClick={() => this.handleUpdateComment(comment.id)}>
+																	Update comment hash
+																</Button>
 															</Card.Body>
 															<Card.Footer>
 																<small className="text-muted">{comment.hash}</small>
@@ -125,15 +128,9 @@ class App extends Component {
 						</CardDeck>
 					</Col>
 				</Row>
-				<br/>
-
-				<Row>
-					<Col>
-						<Button variant="primary" onClick={this.handleUpdateComment}>Update comment one!</Button>
-					</Col>
-				</Row>
 
 				<br/>
+
 				<Row>
 					<Col>
 						<Heading>State tree:</Heading>
@@ -154,4 +151,4 @@ function guidGenerator() {
     return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
 }
 
-export default App;
+export default ExampleOneNoNormalizr;
