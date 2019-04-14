@@ -15,7 +15,6 @@ import {
 
 class ExampleOneNoNormalising extends Component {
 	state = {
-		comments: {},
 		posts: [],
 		error: false
 	}
@@ -69,7 +68,7 @@ class ExampleOneNoNormalising extends Component {
 	}
 
 	render() {
-		const { comments, error, posts } = this.state;
+		const { error, posts } = this.state;
 
 		if (error) {
 			return <div>Something went wrong, yikes</div>
